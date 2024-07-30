@@ -1,5 +1,7 @@
-def addition(num1, num2):
-    return num1 + num2
+from bs4 import BeautifulSoup
 
-answer = addition(7, 9)
-print(answer)
+linkInput = input("Enter Your Link: ")
+
+with open(linkInput) as webLink:
+    link = BeautifulSoup(webLink)
+    print(link)
